@@ -25,9 +25,7 @@ public class PersonGenerator{
         choice = sc.nextLine();
     } while ("Y".equals(choice)) ;  choice.equals("Y");
 try  {FileWriter myWriter = new FileWriter ("Persons.txt");
-    for (int i = 0; i < persons.size(); i++) {
-        myWriter.write(persons.get(i).toCSVDataRecord() + "\n");
-    }
+    for (int i = 0; i < persons.size(); i++) myWriter.write(persons.get(i).toCSVDataRecord() + "\n");
 
       myWriter.close();
     }  catch (IOException e) {
